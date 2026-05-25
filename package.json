@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "scripts": {},
+  "scripts": {
+    "start": "node --env-file=.env server.js",
+    "watch": "node --watch --env-file=.env server.js"
+  },
   "keywords": [],
   "author": "De Pasca Raffaele",
   "license": "ISC",
