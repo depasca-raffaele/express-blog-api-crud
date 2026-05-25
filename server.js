@@ -1,5 +1,6 @@
 import express from 'express';
-import postsRouter from './public/img/posts/posts.js';
+import postsRouter from './routers/posts.js';
+import posts from './public/img/posts/posts.js';
 
 const app = express();
 
