@@ -1,5 +1,5 @@
-import express, { response } from 'express';
-import posts from '../public/img/posts/posts.js';
+import express from 'express';
+import posts from '../data/posts.js';
 
 const router = express.Router();
 
