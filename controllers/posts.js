@@ -30,6 +30,8 @@ export function show(request, response) {
 
 // CREATE
 export function create(request, response) {
+    console.log('Body ricevuto', request.body);
+
     const newId = posts.length ? Math.max(...posts.map((p) => p.id)) + 1 : 1;
     const newPost = { id: newId, ...request.body };
 
