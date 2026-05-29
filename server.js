@@ -4,15 +4,16 @@ import posts from './data/posts.js';
 
 const app = express();
 
+
+
+app.use(express.static('public'));
+app.use(express.json());
 app.use((error, request, response, next) => {
     if (error instanceof SyntaxError && 'body' in error) {
         return response.status(400).json({ message: 'JSON non valido nel body' });
     }
     next(error);
 });
-
-app.use(express.static('public'));
-app.use(express.json());
 app.get('/', (request, response) => {
     response.json({message: 'Server del blog attivo' });
 });
